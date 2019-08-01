@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: lightgrey;
+    border-radius: 0;
+    padding: 6tem 10% 3rem;
+    margin-bottom: 0;
+}
+
+.title {
+    color: white;
+}
+
+.subtitle {
+    color: yellow;
+}
