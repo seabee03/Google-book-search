@@ -32,10 +32,11 @@ class Search extends Component {
         return (
             <div>
                 <Jumbotron />
-                <SearchBar change=
-                {this.handleInput} submit=
-                {this.handleSubmit}/>
-                {/* <div className="wrapper"> */}
+                <SearchBar change={this.handleInput} submit={this.handleSubmit}/>
+                <Wrapper>
+                    <FlexContainer>
+                        {this.state.tags.map(tags => <Tag name={tags} click={this.searchBooks} />)}
+                    </FlexContainer>
                     {this.state.results.map(results =>
                         <Results 
                             title={results.volumeInfo.title}
@@ -47,7 +48,7 @@ class Search extends Component {
                             image={results.volumeInfo.imageLinks.thumbnail}
                         />
                     )}
-                {/* </div> */}
+                </Wrapper>
             </div>
         );
     };
