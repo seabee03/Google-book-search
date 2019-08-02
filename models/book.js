@@ -10,11 +10,23 @@ const bookSchema = new Schema({
         type: String,
         required: false
     },
-    synopsis: {
+    description: {
         type: String,
         required: false
     },
-    data: {
+    rating: {
+        type: Number,
+        required: false
+    },
+    image: {
+        type: String,
+        required: false
+    },
+    link: {
+        type: String,
+        required: true
+    },
+    date: {
         type: Date,
         default: Date.now
     }
